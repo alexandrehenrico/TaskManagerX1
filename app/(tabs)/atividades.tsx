@@ -6,7 +6,8 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
-  ScrollView
+  ScrollView,
+  Alert
 } from 'react-native';
 import { ClipboardList, Plus, Filter, Calendar, User, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle, Clock, Play, Bell, BellOff } from 'lucide-react-native';
 import { Colors } from '@/constants/Colors';
