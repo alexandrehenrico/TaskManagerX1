@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Colors } from '@/constants/Colors';
 import SplashScreen from '@/components/SplashScreen';
 import WelcomeScreen from '@/components/WelcomeScreen';
 import CompanySetup from '@/components/CompanySetup';
@@ -19,14 +20,6 @@ export default function HomeScreen() {
   useEffect(() => {
     initializeApp();
   }, []);
-
-  useEffect(() => {
-    if (!taskManager.isLoading) {
-      if (taskManager.empresa) {
-        setAppState('dashboard');
-      }
-    }
-  }, [taskManager.isLoading, taskManager.empresa]);
 
   const initializeApp = async () => {
     // Request notification permissions
